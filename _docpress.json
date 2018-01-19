@@ -1,0 +1,23 @@
+{
+  "toc": {
+    "sections": [
+      {
+        "title": "stream.js",
+        "source": "docs/Index.md",
+        "url": "index.html",
+        "slug": "index"
+      }
+    ]
+  },
+  "index": {
+    "index.html": {
+      "source": "docs/Index.md",
+      "title": "stream.js",
+      "pageTitle": "stream.js",
+      "slug": "index"
+    }
+  },
+  "sources": {
+    "docs/Index.md": "index.html"
+  }
+}
