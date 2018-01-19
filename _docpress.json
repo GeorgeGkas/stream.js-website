@@ -6,6 +6,319 @@
         "source": "docs/Index.md",
         "url": "index.html",
         "slug": "index"
+      },
+      {
+        "title": "Installation",
+        "source": "docs/Installation.md",
+        "anchor": "#",
+        "url": "Installation.html",
+        "slug": "installation"
+      },
+      {
+        "title": "Usage",
+        "source": "docs/Usage.md",
+        "anchor": "#",
+        "url": "Usage.html",
+        "slug": "usage"
+      },
+      {
+        "title": "API Reference",
+        "sections": [
+          {
+            "title": "Instance Methods",
+            "source": "docs/Instance.md",
+            "url": "Instance.html",
+            "slug": "instance",
+            "sections": [
+              {
+                "title": "create()",
+                "source": "docs/Instance.md",
+                "anchor": "#create",
+                "url": "Instance.html",
+                "slug": "instance-2"
+              },
+              {
+                "title": "empty()",
+                "source": "docs/Instance.md",
+                "anchor": "#empty",
+                "url": "Instance.html",
+                "slug": "instance-3"
+              },
+              {
+                "title": "head()",
+                "source": "docs/Instance.md",
+                "anchor": "#head",
+                "url": "Instance.html",
+                "slug": "instance-4"
+              },
+              {
+                "title": "tail()",
+                "source": "docs/Instance.md",
+                "anchor": "#tail",
+                "url": "Instance.html",
+                "slug": "instance-5"
+              },
+              {
+                "title": "item()",
+                "source": "docs/Instance.md",
+                "anchor": "#item",
+                "url": "Instance.html",
+                "slug": "instance-6"
+              },
+              {
+                "title": "length()",
+                "source": "docs/Instance.md",
+                "anchor": "#length",
+                "url": "Instance.html",
+                "slug": "instance-7"
+              },
+              {
+                "title": "add()",
+                "source": "docs/Instance.md",
+                "anchor": "#add",
+                "url": "Instance.html",
+                "slug": "instance-8"
+              },
+              {
+                "title": "append()",
+                "source": "docs/Instance.md",
+                "anchor": "#append",
+                "url": "Instance.html",
+                "slug": "instance-9"
+              },
+              {
+                "title": "zip()",
+                "source": "docs/Instance.md",
+                "anchor": "#zip",
+                "url": "Instance.html",
+                "slug": "instance-10"
+              },
+              {
+                "title": "map()",
+                "source": "docs/Instance.md",
+                "anchor": "#map",
+                "url": "Instance.html",
+                "slug": "instance-11"
+              },
+              {
+                "title": "concatmap()",
+                "source": "docs/Instance.md",
+                "anchor": "#concatmap",
+                "url": "Instance.html",
+                "slug": "instance-12"
+              },
+              {
+                "title": "reduce()",
+                "source": "docs/Instance.md",
+                "anchor": "#reduce",
+                "url": "Instance.html",
+                "slug": "instance-13"
+              },
+              {
+                "title": "sum()",
+                "source": "docs/Instance.md",
+                "anchor": "#sum",
+                "url": "Instance.html",
+                "slug": "instance-14"
+              },
+              {
+                "title": "walk()",
+                "source": "docs/Instance.md",
+                "anchor": "#walk",
+                "url": "Instance.html",
+                "slug": "instance-15"
+              },
+              {
+                "title": "force()",
+                "source": "docs/Instance.md",
+                "anchor": "#force",
+                "url": "Instance.html",
+                "slug": "instance-16"
+              },
+              {
+                "title": "scale()",
+                "source": "docs/Instance.md",
+                "anchor": "#scale",
+                "url": "Instance.html",
+                "slug": "instance-17"
+              },
+              {
+                "title": "filter()",
+                "source": "docs/Instance.md",
+                "anchor": "#filter",
+                "url": "Instance.html",
+                "slug": "instance-18"
+              },
+              {
+                "title": "take()",
+                "source": "docs/Instance.md",
+                "anchor": "#take",
+                "url": "Instance.html",
+                "slug": "instance-19"
+              },
+              {
+                "title": "takeWhile()",
+                "source": "docs/Instance.md",
+                "anchor": "#takeWhile",
+                "url": "Instance.html",
+                "slug": "instance-20"
+              },
+              {
+                "title": "drop()",
+                "source": "docs/Instance.md",
+                "anchor": "#drop",
+                "url": "Instance.html",
+                "slug": "instance-21"
+              },
+              {
+                "title": "dropWhile()",
+                "source": "docs/Instance.md",
+                "anchor": "#dropWhile",
+                "url": "Instance.html",
+                "slug": "instance-22"
+              },
+              {
+                "title": "member()",
+                "source": "docs/Instance.md",
+                "anchor": "#member",
+                "url": "Instance.html",
+                "slug": "instance-23"
+              },
+              {
+                "title": "print()",
+                "source": "docs/Instance.md",
+                "anchor": "#print",
+                "url": "Instance.html",
+                "slug": "instance-24"
+              },
+              {
+                "title": "take()",
+                "source": "docs/Instance.md",
+                "anchor": "#take",
+                "url": "Instance.html",
+                "slug": "instance-25"
+              },
+              {
+                "title": "takeWhile()",
+                "source": "docs/Instance.md",
+                "anchor": "#takeWhile",
+                "url": "Instance.html",
+                "slug": "instance-26"
+              },
+              {
+                "title": "drop()",
+                "source": "docs/Instance.md",
+                "anchor": "#drop",
+                "url": "Instance.html",
+                "slug": "instance-27"
+              },
+              {
+                "title": "dropWhile()",
+                "source": "docs/Instance.md",
+                "anchor": "#dropWhile",
+                "url": "Instance.html",
+                "slug": "instance-28"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "",
+        "sections": [
+          {
+            "title": "Static Methods",
+            "source": "docs/Static.md",
+            "url": "Static.html",
+            "slug": "static",
+            "sections": [
+              {
+                "title": "continually()",
+                "source": "docs/Static.md",
+                "anchor": "#continually",
+                "url": "Static.html",
+                "slug": "static-2"
+              },
+              {
+                "title": "continuallyEager()",
+                "source": "docs/Static.md",
+                "anchor": "#continuallyEager",
+                "url": "Static.html",
+                "slug": "static-3"
+              },
+              {
+                "title": "repeat()",
+                "source": "docs/Static.md",
+                "anchor": "#repeat",
+                "url": "Static.html",
+                "slug": "static-4"
+              },
+              {
+                "title": "makeOnes()",
+                "source": "docs/Static.md",
+                "anchor": "#makeOnes",
+                "url": "Static.html",
+                "slug": "static-5"
+              },
+              {
+                "title": "makeNaturalNumbers()",
+                "source": "docs/Static.md",
+                "anchor": "#makeNaturalNumbers",
+                "url": "Static.html",
+                "slug": "static-6"
+              },
+              {
+                "title": "make()",
+                "source": "docs/Static.md",
+                "anchor": "#make",
+                "url": "Static.html",
+                "slug": "static-7"
+              },
+              {
+                "title": "fromArray()",
+                "source": "docs/Static.md",
+                "anchor": "#fromArray",
+                "url": "Static.html",
+                "slug": "static-8"
+              },
+              {
+                "title": "range()",
+                "source": "docs/Static.md",
+                "anchor": "#range",
+                "url": "Static.html",
+                "slug": "static-9"
+              },
+              {
+                "title": "equals()",
+                "source": "docs/Static.md",
+                "anchor": "#equals",
+                "url": "Static.html",
+                "slug": "static-10"
+              },
+              {
+                "title": "iterate()",
+                "source": "docs/Static.md",
+                "anchor": "#iterate",
+                "url": "Static.html",
+                "slug": "static-11"
+              },
+              {
+                "title": "iterateEager()",
+                "source": "docs/Static.md",
+                "anchor": "#iterateEager",
+                "url": "Static.html",
+                "slug": "static-12"
+              },
+              {
+                "title": "cycle()",
+                "source": "docs/Static.md",
+                "anchor": "#cycle",
+                "url": "Static.html",
+                "slug": "static-13"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -15,9 +328,37 @@
       "title": "stream.js",
       "pageTitle": "stream.js",
       "slug": "index"
+    },
+    "Installation.html": {
+      "source": "docs/Installation.md",
+      "title": "Installation - stream.js",
+      "pageTitle": "Installation",
+      "slug": "installation"
+    },
+    "Usage.html": {
+      "source": "docs/Usage.md",
+      "title": "Usage - stream.js",
+      "pageTitle": "Usage",
+      "slug": "usage"
+    },
+    "Instance.html": {
+      "source": "docs/Instance.md",
+      "title": "dropWhile() - stream.js",
+      "pageTitle": "dropWhile()",
+      "slug": "instance-28"
+    },
+    "Static.html": {
+      "source": "docs/Static.md",
+      "title": "cycle() - stream.js",
+      "pageTitle": "cycle()",
+      "slug": "static-13"
     }
   },
   "sources": {
-    "docs/Index.md": "index.html"
+    "docs/Index.md": "index.html",
+    "docs/Installation.md": "Installation.html",
+    "docs/Usage.md": "Usage.html",
+    "docs/Instance.md": "Instance.html",
+    "docs/Static.md": "Static.html"
   }
 }
