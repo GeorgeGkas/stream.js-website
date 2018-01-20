@@ -71,14 +71,7 @@
             "source": "docs/API/Constructor.md",
             "anchor": "#",
             "url": "API/Constructor.html",
-            "slug": "apiconstructor",
-            "headings": [
-              {
-                "title": "Constructor",
-                "depth": 2,
-                "id": "constructor"
-              }
-            ]
+            "slug": "apiconstructor"
           },
           {
             "title": "Instance Methods",
@@ -466,14 +459,7 @@
       "source": "docs/API/Constructor.md",
       "title": "Constructor - stream.js",
       "pageTitle": "Constructor",
-      "slug": "apiconstructor",
-      "headings": [
-        {
-          "title": "Constructor",
-          "depth": 2,
-          "id": "constructor"
-        }
-      ]
+      "slug": "apiconstructor"
     },
     "API/Instance.html": {
       "source": "docs/API/Instance.md",
