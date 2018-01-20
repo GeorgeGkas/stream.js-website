@@ -5,219 +5,275 @@
         "title": "stream.js",
         "source": "docs/Index.md",
         "url": "index.html",
-        "slug": "index"
+        "slug": "index",
+        "headings": [
+          {
+            "title": "What's so special about them?",
+            "depth": 2,
+            "id": "what's-so-special-about-them"
+          },
+          {
+            "title": "Installation",
+            "depth": 2,
+            "id": "installation"
+          },
+          {
+            "title": "Usage",
+            "depth": 2,
+            "id": "usage"
+          }
+        ]
       },
       {
-        "title": "Installation",
-        "source": "docs/Installation.md",
-        "anchor": "#",
-        "url": "Installation.html",
-        "slug": "installation"
-      },
-      {
-        "title": "Usage",
-        "source": "docs/Usage.md",
-        "anchor": "#",
-        "url": "Usage.html",
-        "slug": "usage"
+        "title": "Getting Started",
+        "source": "docs/getting_started/README.md",
+        "url": "getting_started/index.html",
+        "slug": "getting_started",
+        "sections": [
+          {
+            "title": "First Stream",
+            "source": "docs/getting_started/First_Stream.md",
+            "url": "getting_started/First_Stream.html",
+            "slug": "getting_startedfirst_stream"
+          },
+          {
+            "title": "More Goodies",
+            "source": "docs/getting_started/More_Goodies.md",
+            "url": "getting_started/More_Goodies.html",
+            "slug": "getting_startedmore_goodies"
+          },
+          {
+            "title": "Beyond Infinity",
+            "source": "docs/getting_started/Beyond_Infinity.md",
+            "anchor": "#",
+            "url": "getting_started/Beyond_Infinity.html",
+            "slug": "getting_startedbeyond_infinity",
+            "headings": [
+              {
+                "title": "Does that require infinite memory/time/processing power?",
+                "depth": 2,
+                "id": "does-that-require-infinite-memorytimeprocessing-power"
+              },
+              {
+                "title": "You are cheating!",
+                "depth": 2,
+                "id": "you-are-cheating!"
+              }
+            ]
+          }
+        ]
       },
       {
         "title": "API Reference",
         "sections": [
           {
+            "title": "Constructor",
+            "source": "docs/API/Constructor.md",
+            "anchor": "#",
+            "url": "API/Constructor.html",
+            "slug": "apiconstructor",
+            "headings": [
+              {
+                "title": "Constructor",
+                "depth": 2,
+                "id": "constructor"
+              }
+            ]
+          },
+          {
             "title": "Instance Methods",
-            "source": "docs/Instance.md",
-            "url": "Instance.html",
-            "slug": "instance",
+            "source": "docs/API/Instance.md",
+            "url": "API/Instance.html",
+            "slug": "apiinstance",
             "sections": [
               {
                 "title": "create()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#create",
-                "url": "Instance.html",
-                "slug": "instance-2"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-2"
               },
               {
                 "title": "empty()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#empty",
-                "url": "Instance.html",
-                "slug": "instance-3"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-3"
               },
               {
                 "title": "head()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#head",
-                "url": "Instance.html",
-                "slug": "instance-4"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-4"
               },
               {
                 "title": "tail()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#tail",
-                "url": "Instance.html",
-                "slug": "instance-5"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-5"
               },
               {
                 "title": "item()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#item",
-                "url": "Instance.html",
-                "slug": "instance-6"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-6"
               },
               {
                 "title": "length()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#length",
-                "url": "Instance.html",
-                "slug": "instance-7"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-7"
               },
               {
                 "title": "add()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#add",
-                "url": "Instance.html",
-                "slug": "instance-8"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-8"
               },
               {
                 "title": "append()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#append",
-                "url": "Instance.html",
-                "slug": "instance-9"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-9"
               },
               {
                 "title": "zip()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#zip",
-                "url": "Instance.html",
-                "slug": "instance-10"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-10"
               },
               {
                 "title": "map()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#map",
-                "url": "Instance.html",
-                "slug": "instance-11"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-11"
               },
               {
                 "title": "concatmap()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#concatmap",
-                "url": "Instance.html",
-                "slug": "instance-12"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-12"
               },
               {
                 "title": "reduce()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#reduce",
-                "url": "Instance.html",
-                "slug": "instance-13"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-13"
               },
               {
                 "title": "sum()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#sum",
-                "url": "Instance.html",
-                "slug": "instance-14"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-14"
               },
               {
                 "title": "walk()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#walk",
-                "url": "Instance.html",
-                "slug": "instance-15"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-15"
               },
               {
                 "title": "force()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#force",
-                "url": "Instance.html",
-                "slug": "instance-16"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-16"
               },
               {
                 "title": "scale()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#scale",
-                "url": "Instance.html",
-                "slug": "instance-17"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-17"
               },
               {
                 "title": "filter()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#filter",
-                "url": "Instance.html",
-                "slug": "instance-18"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-18"
               },
               {
                 "title": "take()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#take",
-                "url": "Instance.html",
-                "slug": "instance-19"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-19"
               },
               {
                 "title": "takeWhile()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#takeWhile",
-                "url": "Instance.html",
-                "slug": "instance-20"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-20"
               },
               {
                 "title": "drop()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#drop",
-                "url": "Instance.html",
-                "slug": "instance-21"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-21"
               },
               {
                 "title": "dropWhile()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#dropWhile",
-                "url": "Instance.html",
-                "slug": "instance-22"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-22"
               },
               {
                 "title": "member()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#member",
-                "url": "Instance.html",
-                "slug": "instance-23"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-23"
               },
               {
                 "title": "print()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#print",
-                "url": "Instance.html",
-                "slug": "instance-24"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-24"
               },
               {
                 "title": "take()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#take",
-                "url": "Instance.html",
-                "slug": "instance-25"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-25"
               },
               {
                 "title": "takeWhile()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#takeWhile",
-                "url": "Instance.html",
-                "slug": "instance-26"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-26"
               },
               {
                 "title": "drop()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#drop",
-                "url": "Instance.html",
-                "slug": "instance-27"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-27"
               },
               {
                 "title": "dropWhile()",
-                "source": "docs/Instance.md",
+                "source": "docs/API/Instance.md",
                 "anchor": "#dropWhile",
-                "url": "Instance.html",
-                "slug": "instance-28"
+                "url": "API/Instance.html",
+                "slug": "apiinstance-28"
               }
             ]
           }
@@ -228,95 +284,119 @@
         "sections": [
           {
             "title": "Static Methods",
-            "source": "docs/Static.md",
-            "url": "Static.html",
-            "slug": "static",
+            "source": "docs/API/Static.md",
+            "url": "API/Static.html",
+            "slug": "apistatic",
             "sections": [
               {
                 "title": "continually()",
-                "source": "docs/Static.md",
+                "source": "docs/API/Static.md",
                 "anchor": "#continually",
-                "url": "Static.html",
-                "slug": "static-2"
+                "url": "API/Static.html",
+                "slug": "apistatic-2"
               },
               {
                 "title": "continuallyEager()",
-                "source": "docs/Static.md",
+                "source": "docs/API/Static.md",
                 "anchor": "#continuallyEager",
-                "url": "Static.html",
-                "slug": "static-3"
+                "url": "API/Static.html",
+                "slug": "apistatic-3"
               },
               {
                 "title": "repeat()",
-                "source": "docs/Static.md",
+                "source": "docs/API/Static.md",
                 "anchor": "#repeat",
-                "url": "Static.html",
-                "slug": "static-4"
+                "url": "API/Static.html",
+                "slug": "apistatic-4"
               },
               {
                 "title": "makeOnes()",
-                "source": "docs/Static.md",
+                "source": "docs/API/Static.md",
                 "anchor": "#makeOnes",
-                "url": "Static.html",
-                "slug": "static-5"
+                "url": "API/Static.html",
+                "slug": "apistatic-5"
               },
               {
                 "title": "makeNaturalNumbers()",
-                "source": "docs/Static.md",
+                "source": "docs/API/Static.md",
                 "anchor": "#makeNaturalNumbers",
-                "url": "Static.html",
-                "slug": "static-6"
+                "url": "API/Static.html",
+                "slug": "apistatic-6"
               },
               {
                 "title": "make()",
-                "source": "docs/Static.md",
+                "source": "docs/API/Static.md",
                 "anchor": "#make",
-                "url": "Static.html",
-                "slug": "static-7"
+                "url": "API/Static.html",
+                "slug": "apistatic-7"
               },
               {
                 "title": "fromArray()",
-                "source": "docs/Static.md",
+                "source": "docs/API/Static.md",
                 "anchor": "#fromArray",
-                "url": "Static.html",
-                "slug": "static-8"
+                "url": "API/Static.html",
+                "slug": "apistatic-8"
               },
               {
                 "title": "range()",
-                "source": "docs/Static.md",
+                "source": "docs/API/Static.md",
                 "anchor": "#range",
-                "url": "Static.html",
-                "slug": "static-9"
+                "url": "API/Static.html",
+                "slug": "apistatic-9"
               },
               {
                 "title": "equals()",
-                "source": "docs/Static.md",
+                "source": "docs/API/Static.md",
                 "anchor": "#equals",
-                "url": "Static.html",
-                "slug": "static-10"
+                "url": "API/Static.html",
+                "slug": "apistatic-10"
               },
               {
                 "title": "iterate()",
-                "source": "docs/Static.md",
+                "source": "docs/API/Static.md",
                 "anchor": "#iterate",
-                "url": "Static.html",
-                "slug": "static-11"
+                "url": "API/Static.html",
+                "slug": "apistatic-11"
               },
               {
                 "title": "iterateEager()",
-                "source": "docs/Static.md",
+                "source": "docs/API/Static.md",
                 "anchor": "#iterateEager",
-                "url": "Static.html",
-                "slug": "static-12"
+                "url": "API/Static.html",
+                "slug": "apistatic-12"
               },
               {
                 "title": "cycle()",
-                "source": "docs/Static.md",
+                "source": "docs/API/Static.md",
                 "anchor": "#cycle",
-                "url": "Static.html",
-                "slug": "static-13"
+                "url": "API/Static.html",
+                "slug": "apistatic-13"
               }
             ]
+          }
+        ]
+      },
+      {
+        "title": "Ports",
+        "source": "docs/Ports.md",
+        "url": "Ports.html",
+        "slug": "ports",
+        "sections": [
+          {
+            "title": "",
+            "source": ""
+          }
+        ]
+      },
+      {
+        "title": "Tribute",
+        "source": "docs/Tribute.md",
+        "url": "Tribute.html",
+        "slug": "tribute",
+        "sections": [
+          {
+            "title": "",
+            "source": ""
           }
         ]
       }
@@ -327,38 +407,109 @@
       "source": "docs/Index.md",
       "title": "stream.js",
       "pageTitle": "stream.js",
-      "slug": "index"
+      "slug": "index",
+      "headings": [
+        {
+          "title": "What's so special about them?",
+          "depth": 2,
+          "id": "what's-so-special-about-them"
+        },
+        {
+          "title": "Installation",
+          "depth": 2,
+          "id": "installation"
+        },
+        {
+          "title": "Usage",
+          "depth": 2,
+          "id": "usage"
+        }
+      ]
     },
-    "Installation.html": {
-      "source": "docs/Installation.md",
-      "title": "Installation - stream.js",
-      "pageTitle": "Installation",
-      "slug": "installation"
+    "getting_started/index.html": {
+      "source": "docs/getting_started/README.md",
+      "title": "Getting Started - stream.js",
+      "pageTitle": "Getting Started",
+      "slug": "getting_started"
     },
-    "Usage.html": {
-      "source": "docs/Usage.md",
-      "title": "Usage - stream.js",
-      "pageTitle": "Usage",
-      "slug": "usage"
+    "getting_started/First_Stream.html": {
+      "source": "docs/getting_started/First_Stream.md",
+      "title": "First Stream - stream.js",
+      "pageTitle": "First Stream",
+      "slug": "getting_startedfirst_stream"
     },
-    "Instance.html": {
-      "source": "docs/Instance.md",
+    "getting_started/More_Goodies.html": {
+      "source": "docs/getting_started/More_Goodies.md",
+      "title": "More Goodies - stream.js",
+      "pageTitle": "More Goodies",
+      "slug": "getting_startedmore_goodies"
+    },
+    "getting_started/Beyond_Infinity.html": {
+      "source": "docs/getting_started/Beyond_Infinity.md",
+      "title": "Beyond Infinity - stream.js",
+      "pageTitle": "Beyond Infinity",
+      "slug": "getting_startedbeyond_infinity",
+      "headings": [
+        {
+          "title": "Does that require infinite memory/time/processing power?",
+          "depth": 2,
+          "id": "does-that-require-infinite-memorytimeprocessing-power"
+        },
+        {
+          "title": "You are cheating!",
+          "depth": 2,
+          "id": "you-are-cheating!"
+        }
+      ]
+    },
+    "API/Constructor.html": {
+      "source": "docs/API/Constructor.md",
+      "title": "Constructor - stream.js",
+      "pageTitle": "Constructor",
+      "slug": "apiconstructor",
+      "headings": [
+        {
+          "title": "Constructor",
+          "depth": 2,
+          "id": "constructor"
+        }
+      ]
+    },
+    "API/Instance.html": {
+      "source": "docs/API/Instance.md",
       "title": "dropWhile() - stream.js",
       "pageTitle": "dropWhile()",
-      "slug": "instance-28"
+      "slug": "apiinstance-28"
     },
-    "Static.html": {
-      "source": "docs/Static.md",
+    "API/Static.html": {
+      "source": "docs/API/Static.md",
       "title": "cycle() - stream.js",
       "pageTitle": "cycle()",
-      "slug": "static-13"
+      "slug": "apistatic-13"
+    },
+    "Ports.html": {
+      "source": "docs/Ports.md",
+      "title": "Ports - stream.js",
+      "pageTitle": "Ports",
+      "slug": "ports"
+    },
+    "Tribute.html": {
+      "source": "docs/Tribute.md",
+      "title": "Tribute - stream.js",
+      "pageTitle": "Tribute",
+      "slug": "tribute"
     }
   },
   "sources": {
     "docs/Index.md": "index.html",
-    "docs/Installation.md": "Installation.html",
-    "docs/Usage.md": "Usage.html",
-    "docs/Instance.md": "Instance.html",
-    "docs/Static.md": "Static.html"
+    "docs/getting_started/README.md": "getting_started/index.html",
+    "docs/getting_started/First_Stream.md": "getting_started/First_Stream.html",
+    "docs/getting_started/More_Goodies.md": "getting_started/More_Goodies.html",
+    "docs/getting_started/Beyond_Infinity.md": "getting_started/Beyond_Infinity.html",
+    "docs/API/Constructor.md": "API/Constructor.html",
+    "docs/API/Instance.md": "API/Instance.html",
+    "docs/API/Static.md": "API/Static.html",
+    "docs/Ports.md": "Ports.html",
+    "docs/Tribute.md": "Tribute.html"
   }
 }
