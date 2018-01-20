@@ -76,197 +76,198 @@
           {
             "title": "Instance Methods",
             "source": "docs/API/Instance.md",
+            "anchor": "#",
             "url": "API/Instance.html",
             "slug": "apiinstance",
-            "sections": [
+            "headings": [
               {
-                "title": "create()",
-                "source": "docs/API/Instance.md",
-                "anchor": "#create",
-                "url": "API/Instance.html",
-                "slug": "apiinstance-2"
-              },
+                "title": "length",
+                "depth": 3,
+                "id": "length"
+              }
+            ],
+            "sections": [
               {
                 "title": "empty()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#empty",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-3"
+                "slug": "apiinstance-2"
               },
               {
                 "title": "head()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#head",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-4"
+                "slug": "apiinstance-3"
               },
               {
                 "title": "tail()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#tail",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-5"
+                "slug": "apiinstance-4"
               },
               {
                 "title": "item()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#item",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-6"
+                "slug": "apiinstance-5"
               },
               {
                 "title": "length()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#length",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-7"
+                "slug": "apiinstance-6"
               },
               {
                 "title": "add()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#add",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-8"
+                "slug": "apiinstance-7"
               },
               {
                 "title": "append()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#append",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-9"
+                "slug": "apiinstance-8"
               },
               {
                 "title": "zip()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#zip",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-10"
+                "slug": "apiinstance-9"
               },
               {
                 "title": "map()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#map",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-11"
+                "slug": "apiinstance-10"
               },
               {
                 "title": "concatmap()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#concatmap",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-12"
+                "slug": "apiinstance-11"
               },
               {
                 "title": "reduce()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#reduce",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-13"
+                "slug": "apiinstance-12"
               },
               {
                 "title": "sum()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#sum",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-14"
+                "slug": "apiinstance-13"
               },
               {
                 "title": "walk()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#walk",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-15"
+                "slug": "apiinstance-14"
               },
               {
                 "title": "force()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#force",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-16"
+                "slug": "apiinstance-15"
               },
               {
                 "title": "scale()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#scale",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-17"
+                "slug": "apiinstance-16"
               },
               {
                 "title": "filter()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#filter",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-18"
+                "slug": "apiinstance-17"
               },
               {
                 "title": "take()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#take",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-19"
+                "slug": "apiinstance-18"
               },
               {
                 "title": "takeWhile()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#takeWhile",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-20"
+                "slug": "apiinstance-19"
               },
               {
                 "title": "drop()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#drop",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-21"
+                "slug": "apiinstance-20"
               },
               {
                 "title": "dropWhile()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#dropWhile",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-22"
+                "slug": "apiinstance-21"
               },
               {
                 "title": "member()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#member",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-23"
+                "slug": "apiinstance-22"
               },
               {
                 "title": "print()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#print",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-24"
+                "slug": "apiinstance-23"
               },
               {
                 "title": "take()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#take",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-25"
+                "slug": "apiinstance-24"
               },
               {
                 "title": "takeWhile()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#takeWhile",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-26"
+                "slug": "apiinstance-25"
               },
               {
                 "title": "drop()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#drop",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-27"
+                "slug": "apiinstance-26"
               },
               {
                 "title": "dropWhile()",
                 "source": "docs/API/Instance.md",
                 "anchor": "#dropWhile",
                 "url": "API/Instance.html",
-                "slug": "apiinstance-28"
+                "slug": "apiinstance-27"
               }
             ]
           }
@@ -465,7 +466,7 @@
       "source": "docs/API/Instance.md",
       "title": "dropWhile() - stream.js",
       "pageTitle": "dropWhile()",
-      "slug": "apiinstance-28"
+      "slug": "apiinstance-27"
     },
     "API/Static.html": {
       "source": "docs/API/Static.md",
