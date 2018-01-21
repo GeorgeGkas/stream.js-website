@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../assets/style.css?t=615badd5">
     <script src="../assets/script.js?t=42463e55"></script>
-    <title>dropWhile() - stream.js</title>
+    <title>print() - stream.js</title>
     <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
@@ -75,14 +75,6 @@
                     </li>
                     <li class="menu-item -level-3"><a class="link title  link-apiinstance-23" href="../API/Instance.html#print">print()</a>
                     </li>
-                    <li class="menu-item -level-3"><a class="link title  link-apiinstance-24" href="../API/Instance.html#take">take()</a>
-                    </li>
-                    <li class="menu-item -level-3"><a class="link title  link-apiinstance-25" href="../API/Instance.html#takeWhile">takeWhile()</a>
-                    </li>
-                    <li class="menu-item -level-3"><a class="link title  link-apiinstance-26" href="../API/Instance.html#drop">drop()</a>
-                    </li>
-                    <li class="menu-item -level-3"><a class="link title  link-apiinstance-27" href="../API/Instance.html#dropWhile">dropWhile()</a>
-                    </li>
                   </ul>
                 </li>
               </ul>
@@ -134,7 +126,7 @@
           </ul>
         </li>
       </div>
-      <div class="body page-apiinstance-27">
+      <div class="body page-apiinstance-23">
         <div class="header-nav">
           <div class="right"><a class="iconlink" href="https://github.com/dionyziz/stream.js" data-title="dionyziz/stream.js">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
@@ -477,6 +469,141 @@ t.print(); <span class="pl-c">// =&gt; 2, 4, 6, 8, 10, 12, 14, 16, 18, 20</span>
 <span class="pl-k">var</span> t = s.filter(f);
 
 t.print(); <span class="pl-c">// =&gt; 1, 3, 5, 7, 9</span>
+</code></pre>
+<hr>
+<h4 id="take">take</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><em>required</em> - A numeric value.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a new stream which contains only the first <code>n</code> items of the current stream. This can be applied on an infinite stream to produce a finite stream. If the stream does not contain enough items to take, those that can be taken are returned and no error is produced.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> s = Stream.make(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>);
+
+<span class="pl-k">var</span> t = s.take(<span class="hljs-number">1</span>);
+t.print(); <span class="pl-c">// =&gt; 10</span>
+
+<span class="pl-k">var</span> u = s.take(<span class="hljs-number">5</span>);
+u.print(); <span class="pl-c">// =&gt; 20, 30</span>
+</code></pre>
+<hr>
+<h4 id="takewhile">takeWhile</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x)</td>
+<td><em>required</em> - A function that is used as condition. <code>x</code> is the current item of the stream.</td>
+</tr>
+</tbody>
+</table>
+<p>Return a new stream by continually taking items from current stream until <code>f</code> applies to <code>true</code>.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">f</span> (<span class="hljs-params">x</span>) </span>{
+  <span class="pl-k">return</span> x &lt; <span class="hljs-number">0</span>;
+}
+
+<span class="pl-k">var</span> s = Stream.make(<span class="hljs-number">-5</span>, <span class="hljs-number">-8</span>, <span class="hljs-number">-2</span>, <span class="hljs-number">34</span>, <span class="hljs-number">10</span>, <span class="hljs-number">-5</span>);
+<span class="pl-k">var</span> t = s.takeWhile(f); <span class="pl-c">// Stop when you find a non-negative value.</span>
+
+t.print(); <span class="pl-c">// =&gt; -5, -8, -2</span>
+</code></pre>
+<hr>
+<h4 id="drop">drop</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td><em>required</em> - A numeric value.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a new stream that does not contain the first <code>n</code> items of the current stream. If the current stream contains less than <code>n</code> items, an empty stream is returned. Dropping items from an infinite stream produces an infinite stream.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> s = Stream.make(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>);
+
+<span class="pl-k">var</span> t = s.drop(<span class="hljs-number">1</span>);
+t.print(); <span class="pl-c">// =&gt; 20, 30</span>
+
+<span class="pl-k">var</span> u = s.drop(<span class="hljs-number">5</span>);
+u.print(); <span class="pl-c">// prints nothing</span>
+</code></pre>
+<hr>
+<h4 id="dropwhile">dropWhile</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x)</td>
+<td><em>required</em> - A function that is used as condition. <code>x</code> is the current item of the stream.</td>
+</tr>
+</tbody>
+</table>
+<p>Return a new stream by continually dropping items from current stream until <code>f</code> applies to <code>true</code>.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">f</span> (<span class="hljs-params">x</span>) </span>{
+  <span class="pl-k">return</span> x &lt; <span class="hljs-number">0</span>;
+}
+
+<span class="pl-k">var</span> s = Stream.make(<span class="hljs-number">-5</span>, <span class="hljs-number">-8</span>, <span class="hljs-number">-2</span>, <span class="hljs-number">34</span>, <span class="hljs-number">10</span>, <span class="hljs-number">-5</span>);
+<span class="pl-k">var</span> t = s.dropWhile(f); <span class="pl-c">// Stop when you find a non-negative value.</span>
+
+t.print(); <span class="pl-c">// =&gt; 34, 10, -5</span>
+</code></pre>
+<hr>
+<h4 id="member">member</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td><em>required</em> - A value to be tested if exists in current stream.</td>
+</tr>
+</tbody>
+</table>
+<p>Checks if x is a member of the stream. Returns <code>true</code> if <code>x</code> exists in the stream or <code>false</code> otherwise. Requires a finite stream.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> s = Stream.make(<span class="pl-s">&apos;Curly&apos;</span>, <span class="pl-s">&apos;Moe&apos;</span>, <span class="pl-s">&apos;Larry&apos;</span>);
+
+<span class="pl-c1">console</span>.log( s.member(<span class="pl-s">&apos;Curly&apos;</span>) ); <span class="pl-c">// =&gt; true</span>
+<span class="pl-c1">console</span>.log( s.member(<span class="pl-s">&apos;Alex&apos;</span>) ); <span class="pl-c">// =&gt; false</span>
+</code></pre>
+<hr>
+<h4 id="print">print</h4>
+<p>Prints the elements of the stream in the console for debugging purposes. If <code>n</code> is provided, only <code>n</code> elements are printed. To be used only in finite stream. This method causes undefined behavior in non-finite streams.</p>
+<pre><code class="lang-js"><span class="pl-c">// Finite stream.</span>
+<span class="pl-k">var</span> s = Stream.make(<span class="pl-s">&apos;Curly&apos;</span>, <span class="pl-s">&apos;Moe&apos;</span>, <span class="pl-s">&apos;Larry&apos;</span>);
+s.print(); <span class="pl-c">// =&gt; &apos;Curly&apos;, &apos;Moe&apos;, &apos;Larry&apos;</span>
+
+<span class="pl-c">// Infinite stream.</span>
+<span class="pl-k">var</span> t = Stream.makeOnes();
+t.print(); <span class="pl-c">// =&gt; hangs!</span>
 </code></pre>
 <hr>
 

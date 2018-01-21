@@ -233,34 +233,6 @@
                 "anchor": "#print",
                 "url": "API/Instance.html",
                 "slug": "apiinstance-23"
-              },
-              {
-                "title": "take()",
-                "source": "docs/API/Instance.md",
-                "anchor": "#take",
-                "url": "API/Instance.html",
-                "slug": "apiinstance-24"
-              },
-              {
-                "title": "takeWhile()",
-                "source": "docs/API/Instance.md",
-                "anchor": "#takeWhile",
-                "url": "API/Instance.html",
-                "slug": "apiinstance-25"
-              },
-              {
-                "title": "drop()",
-                "source": "docs/API/Instance.md",
-                "anchor": "#drop",
-                "url": "API/Instance.html",
-                "slug": "apiinstance-26"
-              },
-              {
-                "title": "dropWhile()",
-                "source": "docs/API/Instance.md",
-                "anchor": "#dropWhile",
-                "url": "API/Instance.html",
-                "slug": "apiinstance-27"
               }
             ]
           }
@@ -457,9 +429,9 @@
     },
     "API/Instance.html": {
       "source": "docs/API/Instance.md",
-      "title": "dropWhile() - stream.js",
-      "pageTitle": "dropWhile()",
-      "slug": "apiinstance-27"
+      "title": "print() - stream.js",
+      "pageTitle": "print()",
+      "slug": "apiinstance-23"
     },
     "API/Static.html": {
       "source": "docs/API/Static.md",
