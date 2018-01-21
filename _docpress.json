@@ -79,13 +79,6 @@
             "anchor": "#",
             "url": "API/Instance.html",
             "slug": "apiinstance",
-            "headings": [
-              {
-                "title": "length",
-                "depth": 3,
-                "id": "length"
-              }
-            ],
             "sections": [
               {
                 "title": "empty()",

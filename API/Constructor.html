@@ -144,7 +144,7 @@
 <blockquote>
 <p>new Stream()</p>
 </blockquote>
-<p>Create a new empty stream.</p>
+<p>Creates a new empty stream (a stream with no elements).</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> s = <span class="pl-k">new</span> Stream();
 
 <span class="pl-c1">console</span>.log( s.length() ) <span class="pl-c">// =&gt; 0</span>
@@ -171,7 +171,7 @@
 </tr>
 </tbody>
 </table>
-<p>Create a new non-empty stream.</p>
+<p>Creates a new stream with the given head and tail. The tail is provided as a promise tailPromise, in the form of a function that returns the tail. This allows a powerful abstraction in the form of lazy streams, which enable features such as infinite streams.</p>
 <pre><code class="lang-js"><span class="pl-c">// the head of the s stream is 10; the tail of the s stream is the empty stream</span>
 <span class="pl-k">var</span> s = <span class="pl-k">new</span> Stream(<span class="hljs-number">10</span>, <span class="hljs-function"><span class="pl-k">function</span> (<span class="hljs-params"></span>) </span>{
   <span class="pl-k">return</span> <span class="pl-k">new</span> Stream();

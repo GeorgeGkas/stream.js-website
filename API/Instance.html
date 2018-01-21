@@ -142,7 +142,7 @@
         </div>
         <div class="markdown-body"><h1 id="instance-methods">Instance Methods</h1>
 <h4 id="empty">empty</h4>
-<p>Check whether a stream is empty or not.</p>
+<p>Checks if the stream is empty and returns a boolean value. This returns <code>false</code> for the empty stream and <code>true</code> for non-empty finite or infinite streams.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> s = <span class="pl-k">new</span> Stream();
 <span class="pl-c1">console</span>.log( s.empty() ) <span class="pl-c">// =&gt; true</span>
 
@@ -152,11 +152,11 @@
 <hr>
 <h4 id="head">head</h4>
 <p>Return the first item of the stream. It throws if it&apos;s called in empty streams.</p>
-<pre><code class="lang-js"><span class="pl-k">var</span> s = <span class="pl-k">new</span> Stream();
-<span class="pl-c1">console</span>.log( s.head() ) <span class="pl-c">// =&gt; Error: Cannot get the head of the empty stream.</span>
-
-<span class="pl-k">var</span> t = <span class="pl-k">new</span> Stream(<span class="hljs-number">10</span>);
+<pre><code class="lang-js"><span class="pl-k">var</span> t = <span class="pl-k">new</span> Stream(<span class="hljs-number">10</span>);
 <span class="pl-c1">console</span>.log( t.head() ) <span class="pl-c">// =&gt; 10</span>
+
+<span class="pl-k">var</span> s = <span class="pl-k">new</span> Stream();
+<span class="pl-c1">console</span>.log( s.head() ) <span class="pl-c">// =&gt; Error: Cannot get the head of the empty stream.</span>
 </code></pre>
 <hr>
 <h4 id="tail">tail</h4>
@@ -190,22 +190,293 @@
 </tr>
 </tbody>
 </table>
-<p>Retrieve a stream item by index. It throws if index is out of range.</p>
-<pre><code class="lang-js"><span class="pl-k">var</span> s = Stream.make(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>);
+<p>Returns the <em>n-th</em> item of the stream. It throws if it&apos;s called in empty streams. If the item does not exist in the stream, an error is thrown. Items of infinite streams can be accessed using this method.</p>
+<pre><code class="lang-js"><span class="pl-c">// Finite stream.</span>
+<span class="pl-k">var</span> s = Stream.make(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>);
 <span class="pl-c1">console</span>.log( s.item(<span class="hljs-number">0</span>) ); <span class="pl-c">// =&gt; 10</span>
 <span class="pl-c1">console</span>.log( s.item(<span class="hljs-number">1</span>) ); <span class="pl-c">// =&gt; 20</span>
 <span class="pl-c1">console</span>.log( s.item(<span class="hljs-number">2</span>) ); <span class="pl-c">// =&gt; 30</span>
 <span class="pl-c1">console</span>.log( s.item(<span class="hljs-number">1000</span>) ); <span class="pl-c">// =&gt; Error: Item index does not exist in stream.</span>
 <span class="pl-c1">console</span>.log( s.item() ); <span class="pl-c">// =&gt; Error: Item index does not exist in stream.</span>
+
+<span class="pl-c">// Infinite stream.</span>
+<span class="pl-k">var</span> t = Stream.makeOnes();
+<span class="pl-c1">console</span>.log( s.item(<span class="hljs-number">12056</span>) ); <span class="pl-c">// =&gt; 1</span>
 </code></pre>
 <hr>
-<h3 id="length">length</h3>
-<p>Returns the length of the stream. The length can be calculated only in finite streams.</p>
-<pre><code class="lang-js"><span class="pl-k">var</span> t = Stream.make(<span class="hljs-number">10</span>);
-<span class="pl-c1">console</span>.log( t.length() ) <span class="pl-c">// =&gt; 10</span>
+<h4 id="length">length</h4>
+<p>Returns the length of a finite stream. This operation has undefined behavior for infinite streams.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> s = Stream.make(<span class="hljs-number">10</span>);
+<span class="pl-c1">console</span>.log( s.length() ) <span class="pl-c">// =&gt; 10</span>
 
-<span class="pl-k">var</span> s = Steam.makeOnes(); <span class="pl-c">// infinite stream</span>
-<span class="pl-c1">console</span>.log( s.length() ) <span class="pl-c">// hangs!</span>
+<span class="pl-k">var</span> t = Steam.makeOnes(); <span class="pl-c">// infinite stream</span>
+<span class="pl-c1">console</span>.log( t.length() ) <span class="pl-c">// hangs!</span>
+</code></pre>
+<hr>
+<h4 id="add">add</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t</td>
+<td><em>required</em> - A stream.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a new stream the elements of which are obtained by summing the current stream with the stream <code>t</code>. Infinite streams can be added. If there are extraneous items in one of the streams, the other stream is assumed to be filled up with zeros to be added.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> s = Stream.range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>); <span class="pl-c">// 1, 2, ...10</span>
+<span class="pl-k">var</span> t = s.scale(<span class="hljs-number">2</span>); <span class="pl-c">// 2, 4, ...20</span>
+<span class="pl-k">var</span> addedTogether = s.add(t);
+
+addedTogether.print(); <span class="pl-c">// =&gt; 3, 6, 9, 12, 15, 18, 21, 24, 27, 30</span>
+</code></pre>
+<hr>
+<h4 id="append">append</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t</td>
+<td><em>required</em> - A stream.</td>
+</tr>
+</tbody>
+</table>
+<p>Creates a new stream whose items consist of the items of the current stream followed by the items of stream <code>t</code>. If the current stream is infinite, it returns the current stream. Appending an infinite stream to a finite stream produces an infinite stream.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> s = Stream.make(<span class="hljs-number">1</span>);
+<span class="pl-k">var</span> t = Stream.make(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+<span class="pl-k">var</span> appendedStream = s.append(t);
+
+appendedStream.print() <span class="pl-c">// =&gt; 1, 2, 3</span>
+</code></pre>
+<hr>
+<h4 id="zip">zip</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x, y)</td>
+<td><em>required</em> - A function. <code>x</code> is the current item of stream <code>t</code> and <code>y</code> is another stream.</td>
+</tr>
+<tr>
+<td>t</td>
+<td><em>required</em> - A Stream.</td>
+</tr>
+</tbody>
+</table>
+<p>Zips the elements of two streams using function <code>f</code>. Returns a new stream. This new stream contains one item for each item of the current stream. The new items are produced by zipping an item from the current stream with an item from stream <code>t</code>. The zipping happens by applying function <code>f</code> between the items from these two streams. <code>f</code> is called with two stream items as a parameter: The first parameter given to it is an item from <code>t</code>, while the second parameter given to it is an item from the current stream. If there are extraneous items in either the current stream or stream <code>t</code> (i.e. if one stream has more items than the other), these are ignored. Infinite streams can be zipped.</p>
+<pre><code class="lang-js"><span class="pl-c">// Streams with identical size.</span>
+<span class="pl-k">var</span> s = Stream.make(<span class="hljs-number">4</span>, <span class="hljs-number">8</span>, <span class="hljs-number">12</span>, <span class="hljs-number">23</span>, <span class="hljs-number">5</span>);
+<span class="pl-k">var</span> t = Stream.make(<span class="hljs-number">2</span>, <span class="hljs-number">10</span>, <span class="hljs-number">5</span>, <span class="hljs-number">99</span>, <span class="hljs-number">100</span>);
+<span class="pl-k">var</span> biggestOfTwo = s.zip(<span class="pl-c1">Math</span>.max, t);
+
+biggestOfTwo.print() <span class="pl-c">// =&gt; 4, 8, 12, 99, 100</span>
+
+<span class="pl-c">// Streams with different size.</span>
+<span class="pl-k">var</span> u = Stream.make(<span class="hljs-number">4</span>, <span class="hljs-number">8</span>, <span class="hljs-number">12</span>, <span class="hljs-number">16</span>, <span class="hljs-number">20</span>);
+<span class="pl-k">var</span> w = Stream.make(<span class="hljs-number">1</span>, <span class="hljs-number">12</span>, <span class="hljs-number">42</span>);
+<span class="pl-k">var</span> biggestOfTwo2 = u.zip(<span class="pl-c1">Math</span>.max, w);
+
+biggestOfTwo2.print() <span class="pl-c">// =&gt; 4, 8, 42, 16, 20</span>
+</code></pre>
+<hr>
+<h4 id="map">map</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x)</td>
+<td><em>required</em> - A function. <code>x</code> is the current item of the stream.</td>
+</tr>
+</tbody>
+</table>
+<p>Applies function <code>f</code> to each element of the current stream and returns a stream of the mapped values. Infinite streams can be mapped.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">f</span> (<span class="hljs-params">x</span>) </span>{
+  <span class="pl-k">return</span> <span class="hljs-number">2</span> * x;
+}
+
+<span class="pl-k">var</span> s = Stream.range(<span class="hljs-number">10</span>, <span class="hljs-number">15</span>); <span class="pl-c">// 10, 11, 12, 13, 14, 15</span>
+<span class="pl-k">var</span> doubled = s.map(f);
+doubled.print(); <span class="pl-c">// =&gt; 20, 22, 24, 26, 28, 30</span>
+</code></pre>
+<hr>
+<h4 id="concatmap">concatmap</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x)</td>
+<td><em>required</em> - A function. <code>x</code> is the current item of the stream.</td>
+</tr>
+</tbody>
+</table>
+<p>Applies the function <code>f</code> to each element of the stream. Then concatenates all the resulting elements into one big stream which is returned. <code>f</code> is applied to each element and is expected to return a stream result.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">f</span> (<span class="hljs-params">x</span>) </span>{
+  <span class="pl-k">return</span> Stream.make(x * <span class="hljs-number">5</span>, x * <span class="hljs-number">10</span>);
+}
+
+<span class="pl-k">var</span> s = Stream.make(<span class="hljs-number">2</span>, <span class="hljs-number">9</span>);
+<span class="pl-k">var</span> t = s.concatmap(f);
+
+t.print() <span class="pl-c">// =&gt; 10, 20, 45, 90</span>
+</code></pre>
+<hr>
+<h4 id="reduce">reduce</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aggregator(prior, current)</td>
+<td><em>required</em> - A function. <code>prior</code> is the previous item of the current stream and <code>current</code> the current item.</td>
+</tr>
+<tr>
+<td>initial</td>
+<td><em>optional</em> - A value to be used as initial value in <code>aggregator</code></td>
+</tr>
+</tbody>
+</table>
+<p>Aggregates the stream elements into a single value through function <em>aggregator</em>. This is known in other languages as a <em>fold</em> or the <em>reduce</em> operation in map/reduce. It applies the <em>aggregator</em> function in the currently aggregated value (which starts at <em>initial</em>) and a stream item to produce a new aggregated value. When all items have been aggregated, it returns the result. If the initial value is omitted, the first element of the stream is taken as the initial value and the fold is applied on the rest of the stream. In this case, the stream must be non-empty. Requires a finite stream.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">aggregator</span>(<span class="hljs-params">prior, current</span>) </span>{
+  <span class="pl-k">return</span> prior + current;
+}
+
+<span class="pl-k">var</span> s = Stream.range(<span class="hljs-number">1</span>, <span class="hljs-number">20</span>); <span class="pl-c">// 1, 2, ...20</span>
+<span class="pl-k">var</span> summed = s.reduce(aggregator, <span class="hljs-number">0</span>);
+
+<span class="pl-c1">console</span>.log( summed ); <span class="pl-c">// =&gt; 210</span>
+</code></pre>
+<hr>
+<h4 id="sum">sum</h4>
+<p>Returns the sum of the items of the stream. Requires a finite stream.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> s = Stream.range(<span class="hljs-number">1</span>, <span class="hljs-number">20</span>); <span class="pl-c">// 1, 2, ...20</span>
+<span class="pl-k">var</span> summed = s.sum();
+
+<span class="pl-c1">console</span>.log( summed ); <span class="pl-c">// =&gt; 210</span>
+</code></pre>
+<hr>
+<h4 id="walk">walk</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x)</td>
+<td><em>required</em> - A function. <code>x</code> is the current item of the stream.</td>
+</tr>
+</tbody>
+</table>
+<p>Walks the stream items by applying function <code>f</code> on them. Equivalent to a for loop over the stream, this forces eager evaluation on the stream. Requires a finite stream.</p>
+<pre><code class="lang-js"><span class="pl-c">// Calculate the sum of all items in the stream.</span>
+<span class="pl-k">var</span> sum = <span class="hljs-number">0</span>;
+<span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">f</span>(<span class="hljs-params">x</span>) </span>{
+  sum += x;
+}
+
+<span class="pl-k">var</span> s = Stream.make(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>);
+
+s.walk(f);
+<span class="pl-c1">console</span>.log( sum ) <span class="pl-c">// =&gt; 100</span>
+</code></pre>
+<hr>
+<h4 id="force">force</h4>
+<p>Forces eager evaluation of the stream. All tails are evaluated until the end of the stream. Requires a finite stream.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> s = Stream.make(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>);
+
+s.force();
+<span class="pl-c1">console</span>.log( s.head() ); <span class="pl-c">// =&gt; 10</span>
+
+s = s.tail();
+s.force();
+<span class="pl-c1">console</span>.log( s.head() ); <span class="pl-c">// =&gt; 20</span>
+
+s = s.tail();
+s.force();
+<span class="pl-c1">console</span>.log( s.head() ); <span class="pl-c">// =&gt; 30</span>
+
+s = s.tail();
+s.force();
+<span class="pl-c1">console</span>.log( s.head() ); <span class="pl-c">// =&gt; 40</span>
+</code></pre>
+<hr>
+<h4 id="scale">scale</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>factor</td>
+<td><em>required</em> - A value.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns a new stream in which all items have been multiplied by the given <code>factor</code>.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> s = Stream.range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>); <span class="pl-c">// 1, 2, ...10</span>
+<span class="pl-k">var</span> t = s.scale(<span class="hljs-number">2</span>);
+
+t.print(); <span class="pl-c">// =&gt; 2, 4, 6, 8, 10, 12, 14, 16, 18, 20</span>
+</code></pre>
+<hr>
+<h4 id="filter">filter</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x)</td>
+<td><em>required</em> - A filter function. <code>x</code> is the current item of the stream.</td>
+</tr>
+</tbody>
+</table>
+<p>Filters the stream items by function <code>f</code>. Returns a new stream with the filtered items. <code>f</code> takes a single stream item and returns true or false. Only items for which it returns true are kept. Infinite streams can be filtered.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">f</span> (<span class="hljs-params">x</span>) </span>{
+  <span class="pl-k">return</span> x % <span class="hljs-number">2</span>;
+}
+
+<span class="pl-k">var</span> s = Stream.range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>);
+<span class="pl-k">var</span> t = s.filter(f);
+
+t.print(); <span class="pl-c">// =&gt; 1, 3, 5, 7, 9</span>
 </code></pre>
 <hr>
 
